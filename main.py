@@ -1,9 +1,13 @@
 import pyautogui
 import time
-time.sleep(5)
-c = 0
-while c <= 10:
-    pyautogui.typewrite('hello ' + str(c))
+x = input("enter the string:")
+c = int(input("enter the count:"))
+n = 1
+inDelay = int(input("enter the initial delay:"))
+delay = int(input("enter the delay:"))
+time.sleep(inDelay)
+while n <= c:
+    pyautogui.typewrite(x + " " + str(n))
     pyautogui.press("enter")
-    c += 1
-    time.sleep(1)
+    n += 1
+    time.sleep(delay)
